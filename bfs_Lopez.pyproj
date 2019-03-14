@@ -22,6 +22,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="bfs_Lopez.py" />
+    <Compile Include="dfs_Lopez.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="graph.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bfs_1.txt" />
+    <Content Include="bfs_2.txt" />
+    <Content Include="bfs_3.txt" />
+    <Content Include="bfs_4.txt" />
+    <Content Include="dfs_1.txt" />
+    <Content Include="dfs_2.txt" />
+    <Content Include="dfs_3.txt" />
+    <Content Include="dfs_4.txt" />
+    <Content Include="graph_1.txt" />
+    <Content Include="graph_2.txt" />
+    <Content Include="graph_3.txt" />
+    <Content Include="graph_4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
