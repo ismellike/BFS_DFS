@@ -1,8 +1,9 @@
 import sys
 import graph
 
+#pass the head
 def BFS(s):
-    'bfs'
+    s.discovered = True
 
 #perform bfs/dfs on a tree
 def main():
@@ -10,7 +11,9 @@ def main():
         print("Usage: python bfs_Lopez.py <graph_n.txt>")
         sys.exit()
     
-    myGraph = graph.read_file(sys.argv[1])
+    head = graph.read_file(sys.argv[1])
+    BFS(head)
+
 
 if __name__ == "__main__":
     main()

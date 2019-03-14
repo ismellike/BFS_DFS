@@ -1,16 +1,10 @@
-import sys
-
 class node(object):
     def __init__ (self, index):
         self.nodes = []
         self.index = index
+        self.discovered = False
     def addNode(self, index):
         self.nodes.append(index)
-
-class graph(object):
-    def __init__ (self, head, nodes):
-        self.head = head
-        self.nodes = nodes
 
 #read a graph in -> return a tree
 def read_file(path):
@@ -34,5 +28,5 @@ def read_file(path):
                 node_i.addNode(split2)
         #add last node
         nodes.append(node_i)
-    return graph(head, nodes)
+    return nodes[head]
             
