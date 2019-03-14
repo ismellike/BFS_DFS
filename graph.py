@@ -1,10 +1,17 @@
+import sys
+
 class node(object):
     def __init__ (self, index):
-        self.nodes = []
+        self.children = []
         self.index = index
         self.discovered = False
-    def addNode(self, index):
-        self.nodes.append(index)
+    def addChild(self, index):
+        self.children.append(index)
+
+class graph(object):
+    def __init__ (self, head, nodes):
+        self.head = head
+        self.nodes = nodes
 
 #read a graph in -> return a tree
 def read_file(path):
@@ -18,15 +25,15 @@ def read_file(path):
             split1 = int(edge.split(',')[0])
             split2 = int(edge.split(',')[1])
             if(index == split1):
-                node_i.addNode(split2)
+                node_i.addChild(split2)
             else:
                 #previous node needs to be appended
                 if(index != -1):
                     nodes.append(node_i)
                 index = split1;
                 node_i = node(split1)
-                node_i.addNode(split2)
+                node_i.addChild(split2)
         #add last node
         nodes.append(node_i)
-    return nodes[head]
+    return graph(head, nodes)
             
